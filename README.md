@@ -26,7 +26,8 @@ car-price-predictor/
 │   ├── templates/           # HTML templates
 │   ├── app.py              # Main Flask application
 │   ├── transformation_functions.py  # Feature engineering utilities
-│   └── config.py           # Application configuration
+│   ├── wsgi.py             # WSGI entry point for production
+│   └── __init__.py
 ├── data/
 │   ├── feature-transformation-data.json  # Encoding mappings
 │   ├── models_to_makes.json             # Vehicle relationships
@@ -35,6 +36,7 @@ car-price-predictor/
 │   └── lgb                 # Trained LightGBM model (pickle)
 ├── notebooks/
 │   └── EDA_Technolabs.ipynb  # Exploratory Data Analysis
+├── run.py                 # Development server entry point
 ├── requirements.txt
 ├── Procfile               # Heroku deployment config
 └── README.md
@@ -67,8 +69,7 @@ pip install -r requirements.txt
 
 4. **Run the application**
 ```bash
-cd app
-python app.py
+python run.py
 ```
 
 5. **Access the web interface**
