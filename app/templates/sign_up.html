@@ -15,51 +15,45 @@
 
 {% block content %}
 
-			<!-- Checkout -->
-			<div class="container-fluid no-left-padding no-right-padding woocommerce-checkout">
+			<!-- Register Section -->
+			<div class="container-fluid no-left-padding no-right-padding">
 				<!-- Container -->
 				<div class="container">
-					<!-- Billing -->
-					<div class="checkout-form">
-						<form>
-                            <style>
-                              form  {   display:inline-block;text-align: center;width: 50%;margin-left : 25% }
-                                label { display: table-cell; }
-                                input { display: table-cell; }
-                                div{align-items: center;}
-                            </style>
-							<div class="col-md-20 col-sm-26 col-xs-12">
-								<h3>Sign up</h3>
-								<div class="billing-field">
-                                    <div class="col-md-12 form-group">
-										<label  >Full name*</label>
-                                        <p></p>
-										<input name = "Name" type = "text"placeholder="Full name">
-									</div>
-									<div class="col-md-12 form-group">
-										<label  >Email *</label>
-                                        <p></p>
-										<input name = "email" type = "text"placeholder="E-Mail address">
-									</div>
-									<div class="col-md-12 form-group">
-										<label>Password * </label>
-                                        <p></p>
-                                        <input name = "new password" type = "password"placeholder="new password">
-									</div>
-                                    <div class="col-md-12 form-group">
-										<label>Confirm Password * </label>
-                                        <p></p>
-                                        <input name = "confirm password" type = "password"placeholder="confirm password">
-									</div>
-									<div class="place-order">
-										<input value="Sign up" type="submit">
-									</div>
+					<div class="row" style="display: flex; justify-content: center;">
+						<div class="col-md-6 col-sm-8 col-xs-12">
+							<div class="register-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px; margin: 40px auto; max-width: 500px;">
+								<div style="text-align: center; margin-bottom: 30px;">
+									<h3 style="color: #1e3a5f; font-size: 28px; margin-bottom: 10px;">Create Account</h3>
+									<p style="color: #666;">Join us today</p>
 								</div>
+								<form style="max-width: 400px; margin: 0 auto;">
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Full Name</label>
+										<input name="Name" type="text" class="form-control" placeholder="Enter your full name" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; transition: border-color 0.3s; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Email Address</label>
+										<input name="email" type="email" class="form-control" placeholder="Enter your email" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; transition: border-color 0.3s; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Password</label>
+										<input name="new_password" type="password" class="form-control" placeholder="Create a password" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; transition: border-color 0.3s; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 25px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Confirm Password</label>
+										<input name="confirm_password" type="password" class="form-control" placeholder="Confirm your password" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; transition: border-color 0.3s; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<button type="submit" style="width: 100%; background: #2563eb; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">Create Account</button>
+									</div>
+									<div style="text-align: center; color: #666;">
+										<p>Already have an account? <a href="{{ url_for('login') }}" style="color: #2563eb; font-weight: 600;">Sign in</a></p>
+									</div>
+								</form>
 							</div>
-						</form>
-					</div><!-- Billing /- -->
+						</div>
+					</div>
 				</div><!-- Container /- -->
-			</div><!-- Checkout /- -->
-			<!-- ABOUT US /- -->
+			</div><!-- Register Section /- -->
 
 {% endblock content %}
