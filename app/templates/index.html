@@ -14,78 +14,72 @@
 {% block content %}
 
 			<!-- form -->
-			<div class="container-fluid no-left-padding no-right-padding woocommerce-checkout">
+			<div class="container-fluid no-left-padding no-right-padding">
 				<!-- Container -->
 				<div class="container">
-					<!-- specifications -->
-					<div class="checkout-form">
-						<form action="/getprice" method="POST" id="specs-form">
-							<div class="col-md-20 col-sm-26 col-xs-12">
-								<h3>car specifications</h3>
-								<div class="billing-field">
-									<div class="col-md-12 form-group">
-										<label>State</label>
-										<div class="select">
-											<select class="form-control" name="state-name" id="states">
-												{% for state in states %}
-												<option>{{ state }}</option>
-												{% endfor %}
-											</select>
-										</div>
-									</div>
-									<div class="col-md-12 form-group">
-										<label>City *</label>
-										<div class="select">
-											<select class="form-control" name="city-name" id="cities">
-												{% for city in cities %}
-												<option>{{ city }}</option>
-												{% endfor %}
-											</select>
-										</div>
-									</div>
-									<div class="col-md-12 form-group">
-										<label>brand</label>
-										<div class="select">
-											<select class="form-control" name="make-name" id="makes">
-												{% for make in makes %}
-												<option>{{ make }}</option>
-												{% endfor %}
-											</select>
-										</div>
-									</div>
-									<div class="col-md-12 form-group">
-										<label>model</label>
-										<div class="select">
-											<select class="form-control" name="model-name" id="models">
-												{% for model in models %}
-												<option>{{ model }}</option>
-												{% endfor %}
-											</select>
-										</div>
-									</div>
-									<div class="col-md-12 form-group">
-										<label for="validationCustom01">purchase year *</label>
-										<input class="form-control" id="validationCustom01" placeholder="the year you purchased the car" type="number" name="purchase-year" required>
-									</div>
-									<div class="col-md-12 form-group">
-										<label for="validationCustom01">Mileage *</label>
-										<input class="form-control" id="validationCustom01" placeholder="the number of miles travelled or covered" type="number" name="mileage" required>
-									</div>
-									<div class="place-order">
-										<input value="GET ESTIMATE PRICE" type="submit">
-									</div>
-									<div class="col-md-12 form-group"></div>
-									{% if price %}
-									<nav class="ow-pagination">
-										<ul class="pager">
-											<li class="load-more"><a href="#">${{ price }}</a></li>
-										</ul>
-									</nav>				
-									{% endif %}
+					<div class="row" style="display: flex; justify-content: center;">
+						<div class="col-md-8 col-sm-10 col-xs-12">
+							<div class="prediction-card" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px; margin: 40px auto;">
+								<div style="text-align: center; margin-bottom: 30px;">
+									<h3 style="color: #1e3a5f; font-size: 28px; margin-bottom: 10px;">Car Specifications</h3>
+									<p style="color: #666;">Get an estimated price for your car</p>
 								</div>
+								<form action="/getprice" method="POST" id="specs-form" style="max-width: 600px; margin: 0 auto;">
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">State</label>
+										<select class="form-control" name="state-name" id="states" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box; background: #fff;">
+											{% for state in states %}
+											<option>{{ state }}</option>
+											{% endfor %}
+										</select>
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">City *</label>
+										<select class="form-control" name="city-name" id="cities" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box; background: #fff;">
+											{% for city in cities %}
+											<option>{{ city }}</option>
+											{% endfor %}
+										</select>
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Brand</label>
+										<select class="form-control" name="make-name" id="makes" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box; background: #fff;">
+											{% for make in makes %}
+											<option>{{ make }}</option>
+											{% endfor %}
+										</select>
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Model</label>
+										<select class="form-control" name="model-name" id="models" style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box; background: #fff;">
+											{% for model in models %}
+											<option>{{ model }}</option>
+											{% endfor %}
+										</select>
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Purchase Year *</label>
+										<input class="form-control" placeholder="The year you purchased the car" type="number" name="purchase-year" required style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 25px;">
+										<label style="font-weight: 600; color: #333; margin-bottom: 8px; display: block; text-align: left;">Mileage *</label>
+										<input class="form-control" placeholder="The number of miles travelled or covered" type="number" name="mileage" required style="width: 100%; border-radius: 8px; padding: 12px 15px; border: 2px solid #e0e0e0; font-size: 14px; box-sizing: border-box;">
+									</div>
+									<div class="form-group" style="margin-bottom: 20px;">
+										<button type="submit" style="width: 100%; background: #2563eb; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">Get Estimate Price</button>
+									</div>
+									{% if price %}
+									<div style="text-align: center; margin-top: 20px;">
+										<div style="background: #f0f9ff; border: 2px solid #2563eb; border-radius: 8px; padding: 20px;">
+											<p style="color: #1e3a5f; font-size: 18px; margin-bottom: 5px; font-weight: 600;">Estimated Price</p>
+											<p style="color: #2563eb; font-size: 32px; font-weight: 700; margin: 0;">${{ price }}</p>
+										</div>
+									</div>
+									{% endif %}
+								</form>
 							</div>
-						</form>
-					</div><!-- specifications /- -->
+						</div>
+					</div>
 				</div><!-- Container /- -->
 			</div><!-- form /- -->
 

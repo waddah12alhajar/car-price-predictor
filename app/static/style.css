@@ -207,7 +207,7 @@ a {
 	transition: all 1s ease 0s;    
 }
 .top-header .header-social li a:hover {
-	color: #b6795f;
+	color: #2563eb;
 }
 .menu-icon > div {
 	display: inline-block;
@@ -245,7 +245,7 @@ a {
 	padding-bottom: 32px;
 }
 .middel-header .logo-block a.navbar-brand {
-	color: #b6795f;
+	color: #2563eb;
 	font-size: 44px;
 	font-family: 'Crimson Text', serif;
 	font-style: italic;
@@ -362,7 +362,7 @@ a {
 .menu-icon .cart .dropdown-menu {
 	border: medium none;
     border-radius: 0;
-	background-color: #b6795f;
+	background-color: #2563eb;
     left: auto;
     padding: 10px 10px 25px 10px;
     right: 0;
@@ -432,7 +432,7 @@ a {
 	padding: 70px 0 50px;
 }
 .footer-main .widget_about > a {
-	color: #b6795f;
+	color: #2563eb;
 	display: inline-block;
 	font-family: 'Crimson Text', serif;
 	font-style: italic;
@@ -465,9 +465,9 @@ a {
 	margin-top: 5px;
 }
 .footer-main .ftr-widget .info p i {
-	border: 1px solid #b6795f;
+	border: 1px solid #2563eb;
 	border-radius: 100%;
-	color: #b6795f;
+	color: #2563eb;
 	font-size: 20px;
 	height: 45px;
 	width: 45px;
@@ -509,11 +509,11 @@ a {
 	text-transform: capitalize;
 }
 .footer-main .widget_links li a:hover {
-	color: #b6795f;
+	color: #2563eb;
 }
 .footer-main .widget_links li a::before {
 	content: "\f0c8";
-	color: #b6795f;
+	color: #2563eb;
 	font-family:'FontAwesome';
 	font-size: 8px;
 	padding-right: 15px;
@@ -580,7 +580,7 @@ a {
 	transition: all 1s ease 0s;
 }
 .footer-main .widget_newsletter .social li a:hover {
-	color: #b6795f;
+	color: #2563eb;
 }
 .footer-main .copyright-section {
 	border-top: 1px solid #cecece;
@@ -624,7 +624,7 @@ a {
 	transition: all 1s ease 0s;
 }
 .footer-main .copyright-section li a:hover {
-	color: #b6795f;
+	color: #2563eb;
 }
 .footer-main .copyright-section li:first-child  a{
 	padding-left: 0;
@@ -689,7 +689,7 @@ a {
 	color: #fff;
 }
 .footer-main-1 .widget_about .social li a:hover {
-	color: #b6795f;
+	color: #2563eb;
 }
 .footer-main-1 .ftr-widget h3.widget-title {
 	color: #fff;
@@ -765,7 +765,7 @@ a {
 	border-color: #dabcaf;
 }
 .ow-pagination .pager li > a {
-	color: #b6795f;
+	color: #2563eb;
 	font-family: 'montserratsemi_bold';
 	letter-spacing: 0.56px;
 	padding: 8px 25px;
@@ -801,7 +801,7 @@ a {
 
 /* * Page Banner */
 .page-banner {
-	background-color: #e4ddc6;
+	background-color: #1e3a5f;
 	position: relative;
 	margin-bottom: 100px;
 	padding: 100px 0;
@@ -811,7 +811,7 @@ a {
 	display: inline-block;
 }
 .page-banner .banner-content h3 {
-	color: #333;
+	color: #ffffff;
 	display: inline-block;
 	font-family: 'montserratlight';
 	font-size: 32px;
@@ -821,7 +821,7 @@ a {
 	line-height: 26px;
 }
 .page-banner .banner-content p {
-	color: #777;
+	color: #e0e7ff;
 	font-size: 13px;
 	letter-spacing: 0.52px;
 	line-height: 24px;
@@ -833,9 +833,9 @@ a {
 	margin-bottom: 0;
 	padding: 0;
 }
-.page-banner .breadcrumb li, 
+.page-banner .breadcrumb li,
 .page-banner .breadcrumb li a {
-	color: #333;
+	color: #ffffff;
 	font-weight: 600;
 	font-size: 13px;
     text-decoration: none;
@@ -843,10 +843,10 @@ a {
 	text-transform: uppercase;
 }
 .page-banner .breadcrumb li.active {
-	color: #b6795f;
+	color: #60a5fa;
 }
 .page-banner .breadcrumb > li + li::before {
-	color: #333;
+	color: #ffffff;
     content: "/";
     padding: 0 5px;
 }
